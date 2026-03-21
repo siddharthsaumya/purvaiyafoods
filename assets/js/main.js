@@ -1,6 +1,24 @@
 // Main JavaScript File for Spice Blends Website - Responsive Version
 
 // ============================================
+// PAGE LOADER - WAIT FOR IMAGES TO LOAD
+// ============================================
+
+window.addEventListener('load', function() {
+  // All images are now loaded
+  const loader = document.getElementById('loader');
+  if (loader) {
+    // Add hidden class to fade out the loader
+    loader.classList.add('hidden');
+    
+    // Remove the loader element from DOM after animation completes
+    setTimeout(() => {
+      loader.remove();
+    }, 500);
+  }
+});
+
+// ============================================
 // INITIALIZATION
 // ============================================
 
