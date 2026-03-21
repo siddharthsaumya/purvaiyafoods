@@ -339,7 +339,7 @@ main {
   color: var(--white);
   padding: var(--spacing-2xl) var(--spacing-md);
   text-align: center;
-  height: 100vh;
+  height: 87vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,7 +349,7 @@ main {
   .hero-image{
     width: 50px;
     position: absolute;
-    bottom: 180px;
+    bottom: 100px;
     right: 20px;
     animation: levitate 3s ease-in-out infinite;
   }
