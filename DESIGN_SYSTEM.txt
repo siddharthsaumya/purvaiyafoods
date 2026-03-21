@@ -1,0 +1,81 @@
+/* Color Constants for Color Scheme Reference */
+
+Primary Color - #8B4513 (Saddle Brown)
+  - Used for: Main headings, primary text, logo
+  - RGB: rgb(139, 69, 19)
+  - HSL: hsl(25, 76%, 31%)
+
+Secondary Color - #D4AF37 (Gold)
+  - Used for: Accent elements, buttons, hover states
+  - RGB: rgb(212, 175, 55)
+  - HSL: hsl(45, 76%, 52%)
+
+Accent Dark - #2C2C2C (Near Black)
+  - Used for: Footer background, high contrast text
+  - RGB: rgb(44, 44, 44)
+  - HSL: hsl(0, 0%, 17%)
+
+Background Light - #FAF9F6 (Cream)
+  - Used for: Alternate section backgrounds
+  - RGB: rgb(250, 249, 246)
+  - HSL: hsl(30, 100%, 97%)
+
+Text Dark - #1A1A1A (Almost Black)
+  - Used for: Main body text, headings
+  - RGB: rgb(26, 26, 26)
+  - HSL: hsl(0, 0%, 10%)
+
+Text Light - #666666 (Medium Gray)
+  - Used for: Muted text, descriptions
+  - RGB: rgb(102, 102, 102)
+  - HSL: hsl(0, 0%, 40%)
+
+Border Color - #E0E0E0 (Light Gray)
+  - Used for: Dividers, borders
+  - RGB: rgb(224, 224, 224)
+  - HSL: hsl(0, 0%, 88%)
+
+White - #FFFFFF
+  - Used for: Cards, text on dark backgrounds
+  - RGB: rgb(255, 255, 255)
+  - HSL: hsl(0, 0%, 100%)
+
+Typography Scale
+
+H1 - 48px (mobile: 32px)
+H2 - 36px (mobile: 28px)
+H3 - 28px (mobile: 24px)
+H4 - 24px
+P  - 16px
+Small - 14px
+
+Font Stack:
+- Headings: 'Georgia', serif
+- Body: 'Raleway', sans-serif
+
+Spacing Scale
+
+XS  - 8px
+SM  - 16px
+MD  - 24px
+LG  - 32px
+XL  - 48px
+2XL - 64px
+
+Shadows
+
+Light:   0 2px 8px rgba(0, 0, 0, 0.1)
+Medium:  0 4px 16px rgba(0, 0, 0, 0.15)
+Heavy:   0 8px 32px rgba(0, 0, 0, 0.2)
+
+Border Radius
+
+SM - 4px
+MD - 8px
+LG - 12px
+
+Breakpoints
+
+Mobile:  < 576px
+Tablet:  576px - 991px
+Desktop: > 992px
