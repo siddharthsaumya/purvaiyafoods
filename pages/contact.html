@@ -7,182 +7,83 @@
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-container">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Header & Navigation -->
     <header>
-        <div>
-            Hello
-        </div>
+        <h5 class="header-notification">
+            FREE Delivery on Orders Over ₹400
+        </h5>
         <img class="logo" src="../assets/images/logo.png" alt="Purvaiya Foods Logo">
     </header>
 
     <main>
-        <section class="hero" style="min-height: 400px;">
-            <div class="hero-content">
-                <h1>Get In Touch</h1>
-                <p>We'd love to hear from you</p>
+        <section class="contact-main">
+            <h2 class="section-title">
+                Contact Us
+            </h2>
+            <div class="section-description">
+                We're here to help and answer any questions you might have. We look forward to hearing from you.
             </div>
-        </section>
+            <div class="grid grid-2" style="gap: var(--spacing-lg); align-items: start; margin-top: var(--spacing-xl);">
+                <!-- Contact Form -->
+                <div style="background: var(--white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-light);">
+                    <h3 style="color: var(--text-dark); margin-bottom: var(--spacing-md);">Send us a Message</h3>
+                    <form action="https://formspree.io/f/mgonjegj" method="POST">
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <input type="text" name="name" placeholder="Your Name" required
+                                style="width: 100%; padding: 0.75rem; background: var(--bg-light); color: var(--text-dark); border: 1px solid var(--border-color); border-radius: var(--border-radius); font-size: 0.95rem;">
+                        </div>
 
-        <section>
-            <div class="grid grid-2" style="margin-bottom: var(--spacing-2xl);">
-                <div>
-                    <h2 style="color: var(--primary-color); margin-bottom: var(--spacing-lg);">Contact Information</h2>
-                    
-                    <div style="margin-bottom: var(--spacing-xl);">
-                        <h4 style="color: var(--text-dark); margin-bottom: var(--spacing-sm);">Email</h4>
-                        <p>
-                            <a href="mailto:hello@spiceblends.com" style="color: var(--secondary-color); font-weight: 600;">hello@spiceblends.com</a><br>
-                            <a href="mailto:support@spiceblends.com" style="color: var(--secondary-color); font-weight: 600;">support@spiceblends.com</a>
-                        </p>
-                    </div>
-                    
-                    <div style="margin-bottom: var(--spacing-xl);">
-                        <h4 style="color: var(--text-dark); margin-bottom: var(--spacing-sm);">Phone</h4>
-                        <p>
-                            <a href="tel:+91800123456" style="color: var(--secondary-color); font-weight: 600;">+91 800 123 456</a><br>
-                            <a href="tel:+918001234567" style="color: var(--secondary-color); font-weight: 600;">+91 800 123 4567</a>
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <h4 style="color: var(--text-dark); margin-bottom: var(--spacing-md);">Follow Us</h4>
-                        <div style="display: flex; gap: 1rem;">
-                            <button class="btn btn-sm btn-primary" onclick="alert('Facebook')">Facebook</button>
-                            <button class="btn btn-sm btn-primary" onclick="alert('Instagram')">Instagram</button>
-                            <button class="btn btn-sm btn-primary" onclick="alert('Twitter')">Twitter</button>
-                            <button class="btn btn-sm btn-primary" onclick="alert('YouTube')">YouTube</button>
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <input type="tel" name="phone" placeholder="Phone Number" required
+                                style="width: 100%; padding: 0.75rem; background: var(--bg-light); color: var(--text-dark); border: 1px solid var(--border-color); border-radius: var(--border-radius); font-size: 0.95rem;">
                         </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h2 style="color: var(--primary-color); margin-bottom: var(--spacing-lg);">Send us a Message</h2>
-                    
-                    <form onsubmit="validateForm(this); return false;">
-                        <div>
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
+
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <input type="email" name="email" placeholder="Email Address" required
+                                style="width: 100%; padding: 0.75rem; background: var(--bg-light); color: var(--text-dark); border: 1px solid var(--border-color); border-radius: var(--border-radius); font-size: 0.95rem;">
                         </div>
-                        
-                        <div>
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
+
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <textarea name="message" placeholder="Your Message" rows="5" required
+                                style="width: 100%; padding: 0.75rem; background: var(--bg-light); color: var(--text-dark); border: 1px solid var(--border-color); border-radius: var(--border-radius); font-size: 0.95rem; font-family: inherit;"></textarea>
                         </div>
-                        
-                        <div>
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div>
-                            <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
-                        <div>
-                            <label for="category">Inquiry Type</label>
-                            <select id="category" name="category">
-                                <option value="general">General Inquiry</option>
-                                <option value="order">Order Related</option>
-                                <option value="partnership">Partnership</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message</button>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
-            </div>
-        </section>
 
-        <section>
-            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: var(--spacing-xl);">Frequently Asked Questions</h2>
-            
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
-                    <h4 style="color: var(--primary-color); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        How long does shipping take?
-                    </h4>
-                    <p class="text-muted" style="margin-top: 0.5rem;">We offer standard shipping (3-5 business days) and express shipping (1-2 business days). Orders are processed within 24 hours.</p>
-                </div>
-                
-                <div style="margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
-                    <h4 style="color: var(--primary-color); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        Are your spices organic?
-                    </h4>
-                    <p class="text-muted" style="margin-top: 0.5rem;">While not all are certified organic, we source from farms that practice sustainable and chemical-free cultivation. No additives or fillers are used.</p>
-                </div>
-                
-                <div style="margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
-                    <h4 style="color: var(--primary-color); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        What's your return policy?
-                    </h4>
-                    <p class="text-muted" style="margin-top: 0.5rem;">We offer a 30-day money-back guarantee. If you're not satisfied, contact us for a full refund or replacement.</p>
-                </div>
-                
-                <div style="margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-lg); border-bottom: 1px solid var(--border-color);">
-                    <h4 style="color: var(--primary-color); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        Can I use these spices for dietary restrictions?
-                    </h4>
-                    <p class="text-muted" style="margin-top: 0.5rem;">All our blends are vegan, gluten-free, and nut-free. However, check individual product pages for specific allergen information.</p>
-                </div>
-                
-                <div style="margin-bottom: var(--spacing-lg);">
-                    <h4 style="color: var(--primary-color); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        How should I store my spices?
-                    </h4>
-                    <p class="text-muted" style="margin-top: 0.5rem;">Store in a cool, dry place away from direct sunlight. Our glass jars help maintain freshness. Properly stored, our blends stay fresh for 12-18 months.</p>
+                <!-- Contact Info -->
+                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-light);">
+                    <h3 style="color: var(--white); margin-bottom: var(--spacing-lg);">Get in Touch</h3>
+                    <div style="margin-bottom: var(--spacing-xl);">
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 0.5rem; font-size: 0.9rem;">EMAIL</p>
+                        <p style="color: var(--white); font-size: 1.1rem; font-weight: 600;">hello@purvaiyafoods.com</p>
+                    </div>
+
+                    <div style="margin-bottom: var(--spacing-xl);">
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 0.5rem; font-size: 0.9rem;">PHONE</p>
+                        <p style="color: var(--white); font-size: 1.1rem; font-weight: 600;">+91-9934288143</p>
+                    </div>
+
+                    <div>
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 0.5rem; font-size: 0.9rem;">RESPONSE TIME</p>
+                        <p style="color: var(--white); font-size: 0.95rem;">We typically respond within 24 business hours.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div>
-                <h4>About Us</h4>
-                <ul>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="philosophy.html">Philosophy</a></li>
-                    <li><a href="craft.html">The Craft</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Shop & Recipes</h4>
-                <ul>
-                    <li><a href="shop.html">All Blends</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="#">Gift Boxes</a></li>
-                    <li><a href="#">Subscriptions</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Community</h4>
-                <ul>
-                    <li><a href="community.html">Food Stories</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">Shipping & Returns</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Spice Blends. All rights reserved.</p>
+            <p>&copy; 2026 Purvaiya Foods. All rights reserved. Crafted with passion for authentic flavors.</p>
         </div>
     </footer>
 

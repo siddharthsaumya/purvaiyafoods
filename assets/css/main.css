@@ -331,6 +331,32 @@ main {
    HERO SECTION
    ============================================ */
 
+     .contact-main{
+      .section-title{
+        text-align: center;
+        margin-bottom: 0;
+        color: var(--text-dark);
+      }
+      .section-description{
+        text-align: center;
+        font-size: var(--spacing-sm);
+        color: var(--text-light);
+      }
+      .contact-info{
+        border: solid 1px var(--text-light);
+        width: fit-content;
+        color: var(--text-light);
+        padding: var(--spacing-md) var(--spacing-md);
+        border-radius: var(--border-radius-md);
+        p{
+          margin-bottom: 0;
+          &:nth-child(1){
+           margin-bottom: var(--spacing-sm);
+          }
+        }
+      }
+     }
+
 .hero {
   background-image: url('../images/homesketch.png');
   background-size: cover;
@@ -504,8 +530,9 @@ section p {
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
-  height: 3px;
-  background-color: var(--text-light);
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
 }
 
 .section-title p {
@@ -1127,6 +1154,117 @@ footer {
 }
 
 /* ============================================
+   FOUNDER STORY SECTION
+   ============================================ */
+
+.founder-story {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.founder-story-content {
+  flex: 1;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.founder-story-content h3 {
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+}
+
+.founder-story-content p {
+  color: var(--text-light);
+  line-height: 1.9;
+  font-size: 1.05rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.founder-story-image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.founder-story-frame {
+  position: relative;
+  padding: var(--spacing-lg);
+  background: #FEFAF6;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-base);
+}
+
+.founder-story-frame:hover {
+  box-shadow: 0 15px 50px rgba(170, 255, 33, 0.15);
+  transform: translateY(-5px);
+}
+
+.founder-story-frame img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  display: block;
+  border: 3px solid var(--white);
+}
+
+.founder-story-frame::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: var(--border-radius-lg);
+  z-index: -1;
+  opacity: 0.15;
+}
+
+@media (max-width: 991px) {
+  .founder-story {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .founder-story-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .founder-story-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .founder-story {
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+  }
+
+  .founder-story-frame {
+    padding: var(--spacing-md);
+  }
+
+  .founder-story-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .founder-story-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+/* ============================================
    ANIMATIONS
    ============================================ */
 
@@ -1180,4 +1318,377 @@ footer {
 
 .slide-in-left {
   animation: slideInLeft 0.6s ease-in-out;
+}
+
+/* ============================================
+   PRODUCT PAGE STYLES
+   ============================================ */
+
+/* Container for Product Layout */
+.container-product {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Product Hero Section */
+.product-hero {
+  background-color: var(--white);
+  padding: var(--spacing-xl) var(--spacing-md);
+  box-shadow: var(--shadow-light);
+}
+
+.product-hero .container-product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+/* Product Gallery/Image */
+.product-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.main-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Product Details */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.product-name {
+  color: var(--text-dark);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+/* Price Section */
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.original-price {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  text-decoration: line-through;
+}
+
+.discount-badge {
+  background-color: var(--best-seller-badge);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Buy Now Button */
+.btn-buy-now {
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+  border: none;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-medium);
+  max-width: 300px;
+}
+
+.btn-buy-now:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.btn-buy-now:active {
+  transform: translateY(0);
+}
+
+/* Speciality Section */
+.speciality-section {
+  margin-top: var(--spacing-lg);
+}
+
+.speciality-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.speciality-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-md);
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-base);
+}
+
+.speciality-item:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.speciality-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.speciality-item p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.speciality-item:hover p {
+  color: var(--text-dark);
+}
+
+/* Product Info Section */
+.product-info {
+  background-color: var(--white);
+  padding: var(--spacing-xl) var(--spacing-md);
+  box-shadow: var(--shadow-light);
+}
+
+.product-info .container-product {
+  max-width: 900px;
+}
+
+/* Tab Navigation */
+.info-tabs {
+  display: flex;
+  gap: var(--spacing-md);
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: var(--spacing-md) var(--spacing-lg);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-btn:hover {
+  color: var(--text-dark);
+}
+
+.tab-btn.active {
+  color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.section-title {
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  border-left: 4px solid var(--primary-color);
+  padding-left: var(--spacing-md);
+}
+
+/* Ingredients List */
+.ingredients-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.ingredients-list li {
+  list-style: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--light-bg);
+  border-left: 4px solid var(--secondary-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: var(--transition-base);
+}
+
+.ingredients-list li:hover {
+  background-color: var(--primary-color);
+  transform: translateX(4px);
+}
+
+/* Recipe Content */
+.recipe-content {
+  color: var(--text-dark);
+}
+
+.recipe-content h4 {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.recipe-list {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.recipe-list li {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+/* Story Content */
+.story-content {
+  color: var(--text-dark);
+  line-height: 1.9;
+}
+
+.story-content p {
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .product-hero .container-product {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .product-name {
+    font-size: 2rem;
+  }
+
+  .speciality-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .price {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-hero {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .product-name {
+    font-size: 1.5rem;
+  }
+
+  .price {
+    font-size: 1.4rem;
+  }
+
+  .speciality-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .speciality-item {
+    padding: var(--spacing-sm);
+  }
+
+  .info-tabs {
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .tab-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .ingredients-list {
+    grid-template-columns: 1fr;
+  }
+
+  .product-info {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .story-content p {
+    font-size: 1rem;
+  }
 }

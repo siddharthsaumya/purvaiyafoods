@@ -7,101 +7,154 @@
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-container">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Header & Navigation -->
     <header>
-        <div>
-            Hello
-        </div>
+        <h5 class="header-notification">
+            FREE Delivery on Orders Over ₹400
+        </h5>
         <img class="logo" src="../assets/images/logo.png" alt="Purvaiya Foods Logo">
     </header>
 
     <main>
-        <section>
-            <h2 style="color: var(--primary-color); margin-bottom: var(--spacing-xl); text-align: center;">OUR PRODUCT</h2>
-            
-            <div class="grid grid-3">
-                <div class="card" data-category="signature">
-                    <img src="https://via.placeholder.com/300x200?text=Ahuna+Mutton+Masala" alt="Ahuna Mutton Masala">
-                    <h3>Ahuna Mutton Masala</h3>
-                    <p>13 premium spices for rich, authentic mutton curries. A best-seller for a reason.</p>
-                    <p style="font-weight: 600; color: var(--secondary-color);">₹399</p>
-                    <button class="btn btn-primary btn-sm" onclick="addToCart('Ahuna Mutton Masala')">Add to Cart</button>
+        <!-- Product Hero Section -->
+        <section class="product-hero">
+            <div class="container-product">
+                <!-- Product Image Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="../assets/images/ahunamutton1.png" alt="Ahuna Mutton Masala">
+                    </div>
+                </div>
+
+                <!-- Product Details Section -->
+                <div class="product-details">
+                    <h1 class="product-name">Champaran's Ahuna Mutton Masala</h1>
+                    
+                    <!-- Price Section -->
+                    <div class="price-section">
+                        <span class="price">₹69</span>
+                        <span class="original-price">₹99</span>
+                        <span class="discount-badge">30% OFF</span>
+                    </div>
+
+                    <!-- Buy Now Button -->
+                    <button onclick="window.open('https://wa.me/919934288143?text=Hello%21%20I%E2%80%99d%20like%20to%20order%20Ahuna%20Mutton%20Masala.%20Please%20let%20me%20know%20how%20I%20can%20proceed.', '_blank')" class="btn-buy-now">Buy Now</button>
+
+                    <!-- Speciality Section -->
+                    <div class="speciality-section">
+                        <h3 class="section-title">Why Choose Ahuna?</h3>
+                        <div class="speciality-grid">
+                            <div class="speciality-item">
+                                <span class="speciality-icon">🌶️</span>
+                                <p>High Grade Spices</p>
+                            </div>
+                            <div class="speciality-item">
+                                <span class="speciality-icon">💯</span>
+                                <p>Pure & Unadulterated</p>
+                            </div>
+                            <div class="speciality-item">
+                                <span class="speciality-icon">👩‍🍳</span>
+                                <p>Authentic Recipe</p>
+                            </div>
+                            <div class="speciality-item">
+                                <span class="speciality-icon">🌿</span>
+                                <p>Fresh & Aromatic</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Shop With Us -->
-        <section>
-            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: var(--spacing-xl);">Why Shop With Us</h2>
-            
-            <div class="grid grid-4">
-                <div class="feature-box">
-                    <div style="font-size: 32px; margin-bottom: 1rem;">🚚</div>
-                    <h4>Fast Shipping</h4>
-                    <p>Free shipping on orders above ₹500. Delivered within 3-5 days.</p>
+        <!-- Product Information Tabs -->
+        <section class="product-info">
+            <div class="container-product">
+                <div class="info-tabs" style="overflow-y: hidden;">
+                    <button class="tab-btn active" data-tab="ingredients">Ingredients</button>
+                    <button class="tab-btn" data-tab="recipe">Recipe</button>
+                    <button class="tab-btn" data-tab="story">Product Story</button>
                 </div>
-                
-                <div class="feature-box">
-                    <div style="font-size: 32px; margin-bottom: 1rem;">🔒</div>
-                    <h4>Secure Payment</h4>
-                    <p>100% secure transactions with multiple payment options.</p>
+
+                <!-- Ingredients Tab -->
+                <div id="ingredients" class="tab-content active">
+                    <h3 class="section-title">Ingredients</h3>
+                    <ul class="ingredients-list">
+                        <li>Coriander Seed</li>
+                        <li>Cumin</li>
+                        <li>Red Chili</li>
+                        <li>Black Cardamom</li>
+                        <li>Long Pepper</li>
+                        <li>Stone Flower</li>
+                        <li>Black Pepper</li>
+                        <li>Turmeric</li>
+                        <li>Ginger</li>
+                        <li>Clove</li>
+                        <li>Cinnamon</li>
+                        <li>Green Cardamom</li>
+                        <li>Nutmeg</li>
+                        <li>Mace</li>
+                        <li>Fennel Seed</li>
+                        <li>Bay Leaf</li>
+                    </ul>
                 </div>
-                
-                <div class="feature-box">
-                    <div style="font-size: 32px; margin-bottom: 1rem;">↩️</div>
-                    <h4>Easy Returns</h4>
-                    <p>30-day money-back guarantee if not fully satisfied.</p>
+
+                <!-- Recipe Tab -->
+                <div id="recipe" class="tab-content">
+                    <h3 class="section-title">Traditional Mutton Masala Recipe</h3>
+                    <div class="recipe-content">
+                        <h4>Ingredients:</h4>
+                        <ul class="recipe-list">
+                            <li>250g Mutton</li>
+                            <li>1 Sachet Ahuna Mutton Masala</li>
+                            <li>200g Onion</li>
+                            <li>Mustard Oil</li>
+                            <li>3 Whole Garlic Buds</li>
+                            <li>Ginger-Garlic Paste</li>
+                            <li>Salt</li>
+                        </ul>
+
+                        <h4>Instructions:</h4>
+                        <ol class="recipe-list">
+                            <li>Step 1: Mix 250g mutton with 1 sachet of Purvaiya Ahuna Mutton Masala, 200g sliced onion, ginger garlic paste,
+                                mustard oil, 2 whole garlic buds and salt.</li>
+                            <li>Step 2: Add the marinated mutton to a pot. Cover tightly and cook on low heat for 40–50 minutes, stirring
+                                occasionally.</li>
+                            <li>Step 3: Cook until the meat is tender and the gravy is rich. Serve hot with roti or rice.</li>
+                        </ol>
+                    </div>
                 </div>
-                
-                <div class="feature-box">
-                    <div style="font-size: 32px; margin-bottom: 1rem;">💬</div>
-                    <h4>Customer Support</h4>
-                    <p>Dedicated support team available 24/7 for your questions.</p>
+
+                <!-- Product Story Tab -->
+                <div id="story" class="tab-content">
+                    <h3 class="section-title">The Story Of Ahuna Mutton</h3>
+                    <div class="story-content">
+                        <p>Ahuna Mutton is a traditional delicacy from the Mithila region of Bihar, known for its slow-cooking technique and
+                            rich, earthy flavors. The word "Ahuna" comes from the local method of cooking meat in a sealed pot over a low flame,
+                            allowing the spices and juices to blend deeply without losing aroma.</p>
+                        
+                        <p>This dish traces its roots to rural households where clay pots were used to prepare meals with patience and care,
+                            often during special occasions and family gatherings. The slow cooking process ensured that the meat absorbed every
+                            bit of flavor, making it uniquely tender and aromatic.</p>
+                        
+                        <p>Over time, Ahuna Mutton became a symbol of authentic Mithila cuisine, celebrated for its bold taste, minimal use of
+                            water, and reliance on natural flavors released during cooking. Today, it continues to carry the legacy of
+                            tradition, offering a nostalgic and soulful experience with every bite.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div>
-                <h4>About Us</h4>
-                <ul>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="philosophy.html">Philosophy</a></li>
-                    <li><a href="craft.html">The Craft</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Shop & Recipes</h4>
-                <ul>
-                    <li><a href="shop.html">All Blends</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="#">Gift Boxes</a></li>
-                    <li><a href="#">Subscriptions</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Community</h4>
-                <ul>
-                    <li><a href="community.html">Food Stories</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">Shipping & Returns</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Spice Blends. All rights reserved.</p>
+            <p>&copy; 2026 Purvaiya Foods. All rights reserved. Crafted with passion for authentic flavors.</p>
         </div>
     </footer>
 
